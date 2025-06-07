@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: hidden; /* Hide scroll bar if not needed */
+    overflow-y: hidden;
     box-sizing: border-box;
 }
 
@@ -25,14 +25,14 @@ body {
 
 .return-icon-link {
     position: absolute;
-    top: 60px;
-    left: 25px;
+    top: 65px;
+    left: 30px;
     z-index: 10;
 }
 
 .return-button {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.2s, opacity 0.3s;
 }
 
@@ -67,7 +67,7 @@ body {
 }
 
 .phrases-header h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #fff;
     letter-spacing: 2px;
     margin: 0;
