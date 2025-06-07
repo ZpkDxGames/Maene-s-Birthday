@@ -1,0 +1,329 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.header-absolute-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.initial-screen-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    min-height: 100dvh;
+    background-image: url('../images/index-page-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: visible;
+    z-index: 1;
+}
+
+.main-content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.main-frame-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    scale: 0.8;
+    margin-bottom: 40px;
+    border-radius: 40px;
+    animation: ascend 0.8s ease-out forwards;
+}
+
+.action-button {
+    padding: 12px 25px;
+    font-size: 1.5em;
+    scale: 1.2;
+    color: #1a303d;
+    background-color: #1b0419;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: popup 0.8s ease-out forwards;
+    width: 20%;
+    max-width: 100px;
+}
+
+.action-button:hover {
+    background-color: #58063d;
+    color: #dddddd;
+    transform: scale(1.2);
+}
+
+.credits-icon-link {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.credits-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.credits-image:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* Ajustes para mobile */
+@media (max-width: 600px) {
+    .initial-screen-container {
+        padding: 10px;
+        height: 100dvh;
+        min-height: 100dvh;
+    }
+    .main-content-area {
+        max-width: 100vw;
+    }
+    .main-frame-image {
+        max-width: 100vw;
+        margin-bottom: 25px;
+    }
+    .action-button {
+        max-width: 100vw;
+        font-size: 1em;
+        padding: 10px 0;
+    }
+    .credits-icon-link {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+.app-header {
+    background-color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #262626;
+}
+
+.feed-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #efefef;
+}
+
+.author-name {
+    font-weight: bold;
+    color: #262626;
+}
+
+.post-date {
+    font-size: 0.8em;
+    color: #8e8e8e;
+}
+
+.post-content {
+    padding: 15px;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #262626;
+}
+
+.post-content p {
+    margin: 0;
+}
+
+.fade-in {
+    animation: fadeInDark 0.25s ease-in-out forwards;
+    background-color: transparent;
+}
+
+@keyframes fadeInDark {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOutDark 0.25s ease-in-out forwards;
+    background-color: transparent;
+}
+
+@keyframes fadeOutDark {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Animações */
+@keyframes ascend {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.info-button {
+    width: 40px;
+    height: 40px;
+}
+
+.return-icon-link {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 10;
+}
+.return-button {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s, opacity 0.3s;
+}
+.return-button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.bottom-left-fixed {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-right-fixed {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-right-fixed:hover {
+    background-color: #6b6b6b;
+    color: #dddddd;
+    transform: scale(1.2);
+}
+
+.bottom-left-fixed:hover {
+    background-color: #6b6b6b;
+    color: #dddddd;
+    transform: scale(1.2);
+}
+
+.info-image,
+.memories-image {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.memories-header {
+    margin: 32px auto 0 auto;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), #1d0617);
+    border-radius: 40px;
+    box-shadow: 0px 4px 24px rgba(161, 140, 209, 0.15);
+    max-width: 500px;
+    pointer-events: auto;
+}
+
+.memories-header h1 {
+    font-size: 1.85rem;
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #a70d62;
+    max-width: 100%;
+    width: 350px
+}

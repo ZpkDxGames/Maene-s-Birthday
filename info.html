@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/info-style.css">
+</head>
+<body class="fade-in">
+    <div class="background-image-container"></div>
+    <a href="index.html" id="returnButton" class="return-icon-link">
+        <img src="src/images/return-icon.png" alt="Voltar" class="return-button">
+    </a>
+    <div class="info-header-outer">
+        <div class="info-header">
+            <h1>Informações?</h1>
+        </div>
+    </div>
+    <div class="info-message-container">
+        Pra que informações?<br>
+        Você sabe muito bem quem fez :P
+    </div>
+    <div class="credit-list">
+        <div class="credit-item">
+            <img src="src/images/tonim.webp" alt="Antônio Neto" class="credit-icon">
+            <div class="credit-info">
+                <h2 class="credit-name">~ Tunica Tristão</h2>
+                <p class="credit-role">➵ Literalmente tudo &lt;3</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const returnButton = document.getElementById('returnButton');
+        if (returnButton) {
+            returnButton.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.body.classList.remove('fade-in');
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 250);
+            });
+        }
+    });
+    </script>
+</body>
+</html>

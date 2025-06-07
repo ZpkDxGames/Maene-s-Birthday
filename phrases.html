@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/phrases-style.css">
+</head>
+<body class="fade-in">
+    <div class="background-image-container"></div>
+    <a href="index.html" id="returnButton" class="return-icon-link">
+        <img src="src/images/return-icon.png" alt="Voltar" class="return-button">
+    </a>
+    <div class="phrases-header-outer">
+        <div class="phrases-header">
+            <h1>Frases de Afeto</h1>
+        </div>
+    </div>
+    <div class="phrases-outer-container">
+        <div class="phrases-main-container">
+            <button class="show-phrase-btn" id="showPhraseBtn">
+                <img src="src/images/gift-icon.png" alt="Presente" class="show-phrase-btn-img">
+            </button>
+            <div class="phrase-popup-wrapper" id="phrasePopupWrapper">
+                <div class="phrase-popup" id="phrasePopup">
+                    <span id="phraseText"></span>
+                    <button id="closePhrasePopup" type="button">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/js/phrases.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const returnButton = document.getElementById('returnButton');
+        if (returnButton) {
+            returnButton.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.body.classList.remove('fade-in');
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 250);
+            });
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela inicial</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="fade-in">
+    <div class="header-absolute-container">
+        <header class="memories-header">
+            <h1>Parabéns, Maene!</h1>
+        </header>
+    </div>
+    <div class="initial-screen-container">
+        <div class="main-content-area">
+            <img src="src/images/main-frame.webp" alt="Quadro principal com mensagem" class="main-frame-image">
+            <button id="surprisebutton" class="action-button">🎁</button>
+        </div>
+
+        <a href="info.html" id="infoLink" class="info-icon-link bottom-left-fixed">
+            <img src="src/images/info-icon.png" alt="Informações" class="info-image">
+        </a>
+        <a href="memories.html" id="memoriesLink" class="memories-icon-link bottom-right-fixed">
+            <img src="src/images/memories-icon.png" alt="Memórias" class="memories-image">
+        </a>
+    </div>
+
+    <script src="src/js/script.js"></script>
+    <script>
+    // Confetti burst on page load
+    window.addEventListener('DOMContentLoaded', function() {
+        // Burst confetti repeatedly for a longer celebration effect
+        function burstConfetti() {
+            confetti({
+                particleCount: 90,
+                spread: 90,
+                origin: { y: 0.1},
+                colors: ['#000000', '#33001a', '#660033', '#99004d', '#cc0066', '#ff3399', '#ff66b2', '#ff99cc'],
+                ticks: 300 // Increase particle lifespan (default is 200)
+            });
+        }
+        const confettiInterval = setInterval(burstConfetti, 150);
+        setTimeout(() => clearInterval(confettiInterval), 3500); // Confetti lasts ~2 seconds
+    });
+    </script>
+</body>
+</html>
