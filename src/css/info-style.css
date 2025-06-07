@@ -4,12 +4,14 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    min-height: 100vh;
+    height: 100vh;
 }
 
 .return-icon-link {
     position: absolute;
-    top: 60px;
-    left: 35px;
+    top: 62px;
+    left: 25px;
     z-index: 10;
 }
 
